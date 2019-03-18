@@ -17,7 +17,7 @@ configuration:
   install:
     - git submodule update --init --recursive
     - cd c:\tools\vcpkg\
-    - git fetch https://github.com/TMwhuhan/vcpkg.git TheiaSfM:TheiaSfM
+    - git fetch https://github.com/TMwhuhan/vcpkg.git TheiaSfM_master:TheiaSfM_master
     - .\bootstrap-vcpkg.bat
     - vcpkg upgrade --no-dry-run
     - vcpkg list
