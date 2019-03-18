@@ -40,5 +40,5 @@ build:
   project: $(APPVEYOR_BUILD_FOLDER)\build\aliceVision.sln
   verbosity: minimal
   
-  cache:
+cache:
   c:\tools\vcpkg\installed\
