@@ -6,7 +6,7 @@ branches:
   only:
     - master
     
- platform:
+platform:
   - x64
 
 configuration:
@@ -27,7 +27,7 @@ install:
         rocksdb
         --triplet %PLATFORM%-windows
         --recurse
-   - vcpkg list
+  - vcpkg list
 before_build:
     - cd %APPVEYOR_BUILD_FOLDER%
     - md build
@@ -36,12 +36,9 @@ before_build:
             -DCMAKE_BUILD_TYPE=%CONFIGURATION%
             -DCMAKE_TOOLCHAIN_FILE=c:/tools/vcpkg/scripts/buildsystems/vcpkg.cmake
     - ls -l
- build:
+build:
   project: $(APPVEYOR_BUILD_FOLDER)\build\aliceVision.sln
   verbosity: minimal
   
   cache:
   c:\tools\vcpkg\installed\
-    
-    
-  
