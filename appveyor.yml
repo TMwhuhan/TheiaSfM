@@ -12,23 +12,23 @@ branches:
 configuration:
   - Release
   
-  install:
-    - git submodule update --init --recursive
-    - cd c:\tools\vcpkg\
-    - git fetch https://github.com/TMwhuhan/vcpkg.git TheiaSfM_master:TheiaSfM_master
-    - .\bootstrap-vcpkg.bat
-    - vcpkg upgrade --no-dry-run
-    - vcpkg list
-    - vcpkg install
-      eigen3
-      gflags
-      ceres[suitesparse]
-      openimageio[libraw]
-      rocksdb
-      --triplet %PLATFORM%-windows
-      --recurse
-     - vcpkg list
- before_build:
+install:
+  - git submodule update --init --recursive
+  - cd c:\tools\vcpkg\
+  - git fetch https://github.com/TMwhuhan/vcpkg.git TheiaSfM_master:TheiaSfM_master
+  - .\bootstrap-vcpkg.bat
+  - vcpkg upgrade --no-dry-run
+  - vcpkg list
+  - vcpkg install
+        eigen3
+        gflags
+        ceres[suitesparse]
+        openimageio[libraw]
+        rocksdb
+        --triplet %PLATFORM%-windows
+        --recurse
+   - vcpkg list
+before_build:
     - cd %APPVEYOR_BUILD_FOLDER%
     - md build
     - cd build
