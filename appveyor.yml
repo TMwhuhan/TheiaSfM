@@ -8,8 +8,6 @@ branches:
     
  platform:
   - x64
- environment: 
-   APPVEYOR_SAVE_CACHE_ON_ERROR: true
 
 configuration:
   - Release
