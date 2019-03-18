@@ -11,6 +11,8 @@ platform:
 
 configuration:
   - Release
+environment:
+  APPVEYOR_SAVE_CACHE_ON_ERROR: true
   
 install:
   - git submodule update --init --recursive
