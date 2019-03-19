@@ -22,9 +22,6 @@ install:
   - vcpkg upgrade --no-dry-run
   - vcpkg list
   - vcpkg install
-#eigen3
-#gflags
-#ceres[suitesparse]
         openimageio[libraw]
         rocksdb
         --triplet %PLATFORM%-windows
