@@ -22,7 +22,6 @@ install:
   - vcpkg upgrade --no-dry-run
   - vcpkg list
   - vcpkg install
-        openimageio[libraw]
         rocksdb
         --triplet %PLATFORM%-windows
         --recurse
