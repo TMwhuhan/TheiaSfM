@@ -39,4 +39,4 @@ build:
   verbosity: minimal
   
 cache:
-  c:\tools\vcpkg\installed\
+  c:\tools\vcpkg
