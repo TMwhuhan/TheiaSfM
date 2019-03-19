@@ -15,14 +15,12 @@ environment:
   APPVEYOR_SAVE_CACHE_ON_ERROR: true
   
 install:
-  - git submodule update --init --recursive
-  - cd c:\tools\vcpkg\
-  - git fetch https://github.com/TMwhuhan/vcpkg.git 
-  - .\bootstrap-vcpkg.bat
-  - vcpkg upgrade --no-dry-run
   - vcpkg list
   - vcpkg install
-        rocksdb
+        eigen3
+        gflags
+        ceres[suitesparse]
+        openimageio[libraw]
         --triplet %PLATFORM%-windows
         --recurse
   - vcpkg list
