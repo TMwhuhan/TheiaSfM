@@ -38,3 +38,4 @@ build:
   
 cache:
   c:\tools\vcpkg
+  c:\tools\vcpkg\installed\
